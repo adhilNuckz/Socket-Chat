@@ -59,6 +59,18 @@ function App() {
   }
 
 
+  
+  function clearMessage() {
+
+    setMessages([]);
+    socket.emit("clear-message", messages);
+    setMessage({});
+    setMessage("");
+
+   
+  }
+
+
 
   socket.on("message", (messages) => {
     setMessages(messages);
@@ -187,7 +199,10 @@ function App() {
       />
       <button onClick={sendMessage}>Send</button>
     </div>
+            <button onClick={clearMessage}>Clear</button>
+
   </div>
+
 </>
 
   )

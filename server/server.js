@@ -29,10 +29,19 @@ io.on('connection', (socket) => {
         }
 
 
+    socket.on("clear-message" , () => {
+        messages = [];
+        io.emit("message", messages);
+
+    }) ;
+
+
     });
 
 
 });
+
+
 
 
 

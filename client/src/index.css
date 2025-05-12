@@ -51,6 +51,7 @@ body {
 
 .messages{
   display: flex ;
+
 }
 
 
@@ -70,7 +71,7 @@ body {
   background-color: rgb(62, 59, 56);
   flex-direction: column;
   overflow-y: scroll;
-  height: 600px;
+  height: 550px;
   width: 100%;
   margin: 5px;
 }
